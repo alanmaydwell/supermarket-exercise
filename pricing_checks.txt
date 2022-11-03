@@ -1,5 +1,5 @@
 # Python Doctest file
-# Run using `python -m doctest -v checks.txt` or `python3 -m doctest -v checks.txt`
+# Run using `python -m doctest -v pricing_checks.txt` or `python3 -m doctest -v pricing_checks.txt`
 
 Setup:
 >>> import pricing
