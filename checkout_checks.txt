@@ -1,0 +1,25 @@
+# Python Doctest file
+# Run using `python -m doctest -v checkout_checks.txt` or `python3 -m doctest -v checkout_checks.txt`
+
+Setup:
+>>> import supermarket
+
+Start transaction and add one fruit tea:
+    >>> checkout = supermarket.Checkout()
+    >>> checkout.add_item("FR1", 2)
+    >>> checkout.items
+    {'FR1': 2, 'SR1': 0, 'CF1': 0}
+
+Add 3 strawberries:
+    >>> checkout.add_item("SR1", 3)
+    >>> checkout.items
+    {'FR1': 2, 'SR1': 3, 'CF1': 0}
+
+Add 4 coffees:
+    >>> checkout.add_item("CF1", 4)
+    >>> checkout.items
+    {'FR1': 2, 'SR1': 3, 'CF1': 4}
+
+Get Price:
+    >>> checkout.get_prices()
+    {'Total': 61.53, 'FR1': 3.11, 'SR1': 13.5, 'CF1': 44.92}
